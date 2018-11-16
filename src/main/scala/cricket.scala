@@ -11,6 +11,8 @@ object cricket {
 
   def main(args: Array[String]): Unit = {
 
+
+
     val session = SparkSession.builder().master("local").appName("cricket consolidator").enableHiveSupport().getOrCreate()
     val sessionreader = session.read
 
