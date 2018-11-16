@@ -33,9 +33,9 @@ object broadcast_join {
     val smallrdd = session.read.format("csv").option("header", "true").option("inferschema", value = true).load("/Users/abhinavkumar/Downloads/2017-06/2017-06-metropolitan-street.csv")
       .select("Crime ID", "Falls within").rdd.map(x=> (x(1), x(2)))
 
-    val res= manualBroadCastHashJoin(bigrdd, smallrdd)
+   // val res= manualBroadCastHashJoin(bigrdd, smallrdd)
 
-   res.foreach( str=> _ match { case   (k, (v1, v2))  => print(k)})
+  // res.foreach( str=> _ match { case   (k, (v1, v2))  => print(k)})
   }
 
 }
