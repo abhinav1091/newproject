@@ -2,6 +2,7 @@ package scala_advance
 
 import org.apache.spark.sql.SparkSession
 
+
 object parquet_format {
 
   def main( args:Array[String]):Unit= {
